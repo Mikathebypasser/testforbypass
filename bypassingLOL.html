@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BypassingLOL</title>
+    <style>
+        body {
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: whitesmoke;
+        }
+        .quote-container {
+            width: 80%;
+            height: 60px;
+            background-color: #121212;
+            color: whitesmoke;
+            text-align: center;
+            line-height: 60px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            border: 3px solid whitesmoke;
+            box-shadow: 0 0 20px 5px whitesmoke;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px; /* Increased to make the box farther from the top */
+            text-transform: uppercase; /* Capitalizes all quotes */
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            height: 350px;
+            background-color: #121212;
+            border: 3px solid whitesmoke;
+            box-shadow: 0 0 20px 5px whitesmoke;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            padding: 20px 0;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        a img {
+            width: 67px;
+            height: 55px;
+            background: transparent;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease-in-out;
+            margin-right: 10px;
+        }
+        a img:hover {
+            box-shadow: 0 0 15px 3px whitesmoke;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container" id="quote-box">
+        BypassingLOL was bought for 50$
+    </div>
+
+    <main>
+        <h1>OFFICIAL BYPASSINGLOL!</h1>
+        <div class="logo-container">
+            <a href="https://discord.com/invite/bypassingLOL" target="_blank">
+                <img src="dc.png" alt="Discord Logo">
+            </a>
+            <a href="shirts.html" target="_self">
+                <img src="shirt.png" alt="Shirts">
+            </a>
+        </div>
+    </main>
+
+    <script>
+        const quotes = [
+            "BypassingLOL was bought for 50$",
+            "BypassingLOL makes around 30k a month",
+            "BypassingLOL has over 20 groups",
+            "BypassingLOL can be found through the discovery page",
+            "BypassingLOL website mainly was created by chatgpt",
+            "Follow hauntedmika on roblox plz"
+        ];
+
+        let currentQuoteIndex = 0;
+
+        function changeQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            const quoteBox = document.getElementById('quote-box');
+            quoteBox.innerHTML = quotes[currentQuoteIndex];
+        }
+
+        setInterval(changeQuote, 5000); // Rotates every 5 seconds
+    </script>
+</body>
+</html>
